@@ -5,38 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="/index.css">
+  <script src="https://kit.fontawesome.com/9e1ea52b25.js" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | [Fidel Lim]</title>
 
 </head>
 <body>
 
-  Samuel Green
-  Available to Walk
-
-  That sounds great. I’d be happy with that.
-
-  Could you send over some pictures of your dog, please?
-
-  Here are a few pictures. She’s a happy girl!
-
-  Can you make it?
-
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
+  <div class="container">
+    <div class="circular-bg">
+    </div>
+    <div class="cp-content-container">
+      <div class="cp-container">
+        <div class="camera-container"></div>
+        <div class="screen-container">
+          <div class="heading-container">
+            <div class="left-heading">
+              <i class="fas fa-chevron-left"></i>
+              <img src="./images/avatar.jpg" alt="man" class="img-man">
+              <div>
+                <h3>Samuel Green</h3>
+                <h5>Available to Walk</h5>
+              </div>
+            </div>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+          
+          <div class="convo-container">
+            <div class="left-bubble">
+              That sounds great. I’d be happy to discuss more.
+            </div>
+            <div class="left-bubble">
+              Could you send over some pictures of your dog, please?
+            </div>
+            <div class="images-container">
+              <img src="./images/dog-image-1.jpg" alt="zoom-in dog">
+              <img src="./images/dog-image-2.jpg" alt="normal dog">
+              <img src="./images/dog-image-3.jpg" alt="zoom-out dog">
+            </div>
+            <div class="right-bubble">
+              Here are a few pictures. She’s a happy girl!
+            </div>         
+            <div class="right-bubble">
+              Can you make it?
+            </div>     
+            <div class="left-bubble">
+              She looks so happy! The time we discussed works. How long shall I take her out for?
+            </div>    
+            <div class="todo-container">
+              <div>
+                <input type="radio">
+                <p>30 minute walk</p>
+              </div>
+              <h2>
+                $29
+              </h2>
+            </div>
+            <div class="todo-container">
+              <div>
+                <input type="radio">
+                <p>1 hour walk</p>
+              </div>
+              <h2>
+                $49
+              </h2>
+            </div>
+            <div class="type-msg-container">
+              <input type="text" placeholder="Type a message…">
+              <button><i class="fas fa-chevron-right"></i></button>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+      <div class="content-container">
+        <h1>Simple booking</h1>
+      
+        <p class="content-para">
+          Stay in touch with our dog walkers through the chat interface. This makes it easy to
+          discuss arrangements and make bookings. Once the walk has been completed you can rate
+          your walker and book again all through the chat.
+        </p>
+      </div>
+    </div>
+  </div>
   
 </body>
 </html>
