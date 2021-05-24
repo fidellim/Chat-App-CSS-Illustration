@@ -72,7 +72,7 @@ body {
   font-size: 10px;
   border-radius: 25px;
   position: relative;
-  filter: drop-shadow(0px 0px 10px #dddddd);
+  filter: drop-shadow(10px 10px 10px #c5c5c5);
   animation: phone-from-right 3s ease-in-out;
 }
 .cp-content-container .cp-container .camera-container {
