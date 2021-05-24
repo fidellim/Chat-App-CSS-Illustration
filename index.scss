@@ -36,8 +36,9 @@
 body {
 	font-size: 16px;
 	font-family: var(--rubrik);
-	background-color: var(--lightGrayishViolet);
+	background-color: white;
 	width: 100%;
+	overflow-x: hidden;
 }
 
 .circular-bg {
@@ -51,6 +52,9 @@ body {
 	border-bottom-left-radius: 50%;
 	// transform: translate(-50%, 0);
 	z-index: 0;
+}
+.circular-bg-opposite {
+	display: none;
 }
 
 //cellphone and "simple booking" container
@@ -71,7 +75,7 @@ body {
 		border-radius: 25px;
 		position: relative;
 		filter: drop-shadow(10px 10px 10px rgb(197, 197, 197));
-		animation: phone-from-right 3s ease-in-out;
+		animation: phone-from-right 1s ease-in-out;
 		.camera-container {
 			position: absolute;
 			width: 150px;
@@ -129,6 +133,38 @@ body {
 				display: flex;
 				flex-direction: column;
 				gap: 0.5rem;
+				.one-bubble {
+					animation: scale-in-center 1s cubic-bezier(0.755, 0.05, 0.855, 0.06)
+						0s;
+				}
+				.two-bubble {
+					animation: scale-in-center 2s cubic-bezier(0.755, 0.05, 0.855, 0.06)
+						0s;
+				}
+				.third-bubble {
+					animation: scale-in-center 3s cubic-bezier(0.755, 0.05, 0.855, 0.06)
+						0s;
+				}
+				.fourth-bubble {
+					animation: scale-in-center 4s cubic-bezier(0.755, 0.05, 0.855, 0.06)
+						0s;
+				}
+				.fifth-bubble {
+					animation: scale-in-center 5s cubic-bezier(0.755, 0.05, 0.855, 0.06)
+						0s;
+				}
+				.sixth-bubble {
+					animation: scale-in-center 6s cubic-bezier(0.755, 0.05, 0.855, 0.06)
+						0s;
+				}
+				.seventh-bubble {
+					animation: scale-in-center 7s cubic-bezier(0.755, 0.05, 0.855, 0.06)
+						0s;
+				}
+				.eight-bubble {
+					animation: scale-in-center 8s cubic-bezier(0.755, 0.05, 0.855, 0.06)
+						0s;
+				}
 				.left-bubble {
 					color: var(--moderateViolet);
 					background-color: #ebe4f5;
@@ -254,7 +290,7 @@ body {
 
 	.content-container {
 		text-align: center;
-		animation: text-from-left 3s ease-in-out;
+		animation: text-from-left 1s ease-in-out;
 		h1 {
 			color: var(--veryDarkDesaturatedViolet);
 			font-weight: 500;
@@ -312,12 +348,42 @@ body {
 	}
 }
 
+@keyframes scale-in-center {
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
 @media (min-width: 768px) {
 	.circular-bg {
 		top: 0;
 		left: -15%;
 		width: 40%;
 		height: 80%;
+	}
+	.circular-bg-opposite {
+		background: var(--lightGrayishViolet);
+		position: absolute;
+		bottom: -5rem;
+		right: -15%;
+		width: 40%;
+		height: 80%;
+		border-top-right-radius: 50%;
+		border-top-left-radius: 50%;
+		z-index: 0;
+		display: block;
 	}
 
 	.cp-content-container {
@@ -326,11 +392,11 @@ body {
 		// flex-wrap: wrap;
 		gap: 2rem;
 		.cp-container {
-			animation: phone-from-up 3s ease-in-out;
+			animation: phone-from-up 1s ease-in-out;
 		}
 
 		.content-container {
-			animation: text-from-down 3s ease-in-out;
+			animation: text-from-down 1s ease-in-out;
 			text-align: left;
 			h1 {
 			}
