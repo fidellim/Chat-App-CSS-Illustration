@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+:root {
+  --rubrik: "Rubik", sans-serif;
+  /*text*/
+  --paleViolet: hsl(276, 100%, 81%);
+  /*(sub-heading at the top of the app UI)*/
+  --moderateViolet: hsl(276, 55%, 52%);
+  /*(chat on the left)*/
+  --desaturatedDarkViolet: hsl(271, 15%, 43%);
+  /*(chat on the right)*/
+  --grayishBlue: hsl(206, 6%, 79%);
+  /*(placeholder text)*/
+  --veryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+  /*(main heading)*/
+  --darkGrayishViolet: hsl(270, 7%, 64%);
+  /*(paragraph)*/
+  /*gradients*/
+  --lightMagenta: hsl(293, 100%, 63%);
+  --lightViolet: hsl(264, 100%, 61%);
+  /*secondary*/
+  --white: hsl(0, 0%, 100%);
+  --lightGrayishViolet: hsl(270, 20%, 96%);
+  /*(app background)*/
+  --veryDarkDesaturatedViolet: hsl(
+  	271,
+  	36%,
+  	24%
+  );
+  /*(submit button background)*/
+  --veryLightMagenta: hsl(289, 100%, 72%);
+  /*(radio button outline)*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--rubrik);
+  background-color: var(--lightGrayishViolet);
+  width: 100vw;
+}
+
+.circular-bg {
+  background: linear-gradient(var(--lightMagenta), var(--lightViolet));
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 75%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  z-index: 0;
+}
+
+.cp-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+  margin: 5rem 0;
+  z-index: 1;
+}
+.cp-content-container .cp-container {
+  background-color: var(--white);
+  padding: 1em;
+  font-size: 10px;
+  border-radius: 25px;
+  position: relative;
+}
+.cp-content-container .cp-container .camera-container {
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: white;
+  border-radius: 12px;
+}
+.cp-content-container .cp-container .screen-container .heading-container {
+  background: linear-gradient(270deg, var(--lightMagenta), var(--lightViolet));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.25rem 1rem 1rem 1rem;
+  border-radius: 25px 25px 7px 7px;
+}
+.cp-content-container .cp-container .screen-container .heading-container .left-heading {
+  display: flex;
+  align-items: center;
+}
+.cp-content-container .cp-container .screen-container .heading-container .left-heading .fa-chevron-left {
+  margin-right: 0.75rem;
+  font-size: 1rem;
+}
+.cp-content-container .cp-container .screen-container .heading-container .left-heading .img-man {
+  border-radius: 50%;
+  border: 3px solid white;
+  width: 35px;
+  margin-right: 0.75rem;
+}
+.cp-content-container .cp-container .screen-container .heading-container .left-heading div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.cp-content-container .cp-container .screen-container .heading-container .left-heading div h3 {
+  color: var(--white);
+}
+.cp-content-container .cp-container .screen-container .heading-container .left-heading div h5 {
+  color: var(--paleViolet);
+}
+.cp-content-container .cp-container .screen-container .convo-container {
+  background-color: var(--lightGrayishViolet);
+  line-height: 1.5;
+  padding: 1rem 0.75rem;
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cp-content-container .cp-container .screen-container .convo-container .left-bubble {
+  color: var(--moderateViolet);
+  background-color: #ebe4f5;
+}
+.cp-content-container .cp-container .screen-container .convo-container .right-bubble {
+  background-color: white;
+  align-self: flex-end;
+  filter: drop-shadow(0px 0px 10px #dbdbdb);
+}
+.cp-content-container .cp-container .screen-container .convo-container .left-bubble,
+.cp-content-container .cp-container .screen-container .convo-container .right-bubble {
+  max-width: 9.5rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+.cp-content-container .cp-container .screen-container .convo-container .images-container {
+  align-self: flex-end;
+}
+.cp-content-container .cp-container .screen-container .convo-container .images-container img {
+  width: 60px;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+.cp-content-container .cp-container .screen-container .convo-container .todo-container {
+  background: linear-gradient(90deg, var(--lightMagenta), var(--lightViolet));
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  max-width: 11.75rem;
+  padding: 0.5rem 1.25rem 0.5rem 0.5rem;
+  border-radius: 12px 12px 12px 5px;
+}
+.cp-content-container .cp-container .screen-container .convo-container .todo-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f8afff;
+}
+.cp-content-container .cp-container .screen-container .convo-container .todo-container div input[type=radio] {
+  background-color: inherit;
+  margin-right: 0.5rem;
+}
+.cp-content-container .cp-container .screen-container .convo-container .todo-container h2 {
+  color: white;
+}
+.cp-content-container .cp-container .screen-container .convo-container .type-msg-container {
+  position: relative;
+  width: 16rem;
+  margin-top: 0.5rem;
+}
+.cp-content-container .cp-container .screen-container .convo-container .type-msg-container input[type=text] {
+  width: 16rem;
+  height: 2.5rem;
+  position: relative;
+  border: 0;
+  border-radius: 20px;
+  padding-left: 1.5rem;
+}
+.cp-content-container .cp-container .screen-container .convo-container .type-msg-container ::placeholder {
+  color: var(--grayishBlue);
+  font-size: 12px;
+}
+.cp-content-container .cp-container .screen-container .convo-container .type-msg-container button {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--veryDarkDesaturatedViolet);
+  text-align: center;
+  padding-left: 2px;
+  transform: translate(0%, -50%);
+}
+.cp-content-container .content-container {
+  text-align: center;
+}
+.cp-content-container .content-container h1 {
+  color: var(--veryDarkDesaturatedViolet);
+  font-weight: 500;
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}
+.cp-content-container .content-container .content-para {
+  color: var(--darkGrayishViolet);
+  line-height: 1.5;
+  padding: 0 1rem;
+  width: 21rem;
+}
+
+.fas {
+  color: var(--white);
+}
+
+/*# sourceMappingURL=index.css.map */
