@@ -41,7 +41,7 @@ body {
   font-size: 16px;
   font-family: var(--rubrik);
   background-color: var(--lightGrayishViolet);
-  width: 100vw;
+  width: 100%;
 }
 
 .circular-bg {
@@ -72,6 +72,8 @@ body {
   font-size: 10px;
   border-radius: 25px;
   position: relative;
+  filter: drop-shadow(0px 0px 10px #dddddd);
+  animation: phone-from-right 3s ease-in-out;
 }
 .cp-content-container .cp-container .camera-container {
   position: absolute;
@@ -157,15 +159,48 @@ body {
   padding: 0.5rem 1.25rem 0.5rem 0.5rem;
   border-radius: 12px 12px 12px 5px;
 }
-.cp-content-container .cp-container .screen-container .convo-container .todo-container div {
+.cp-content-container .cp-container .screen-container .convo-container .todo-container label {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #f8afff;
+  position: relative;
+  cursor: pointer;
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
 }
-.cp-content-container .cp-container .screen-container .convo-container .todo-container div input[type=radio] {
+.cp-content-container .cp-container .screen-container .convo-container .todo-container label input[type=radio] {
+  position: absolute;
+  opacity: 0;
   background-color: inherit;
   margin-right: 0.5rem;
+}
+.cp-content-container .cp-container .screen-container .convo-container .todo-container label .checkmark {
+  background-color: inherit;
+  margin-right: 0.5rem;
+  width: 12.8px;
+  height: 12.8px;
+  border-radius: 50%;
+  border: 1px solid var(--veryLightMagenta);
+  cursor: pointer;
+}
+.cp-content-container .cp-container .screen-container .convo-container .todo-container label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.cp-content-container .cp-container .screen-container .convo-container .todo-container label input:checked ~ .checkmark:after {
+  display: block;
+}
+.cp-content-container .cp-container .screen-container .convo-container .todo-container label .checkmark:after {
+  top: 50%;
+  left: 4%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  transform: translate(0, -55%);
 }
 .cp-content-container .cp-container .screen-container .convo-container .todo-container h2 {
   color: white;
@@ -199,9 +234,11 @@ body {
   text-align: center;
   padding-left: 2px;
   transform: translate(0%, -50%);
+  cursor: pointer;
 }
 .cp-content-container .content-container {
   text-align: center;
+  animation: text-from-left 3s ease-in-out;
 }
 .cp-content-container .content-container h1 {
   color: var(--veryDarkDesaturatedViolet);
@@ -218,6 +255,73 @@ body {
 
 .fas {
   color: var(--white);
+  cursor: pointer;
+}
+
+@keyframes phone-from-right {
+  0% {
+    transform: translate(100%, 0%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes phone-from-up {
+  0% {
+    transform: translate(0%, -100%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes text-from-left {
+  0% {
+    transform: translate(-100%, 0%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes text-from-down {
+  0% {
+    transform: translate(0%, 100%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@media (min-width: 768px) {
+  .circular-bg {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 75%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    z-index: 0;
+  }
+
+  .cp-content-container {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .cp-content-container .cp-container {
+    background-color: var(--white);
+    padding: 1em;
+    font-size: 10px;
+    border-radius: 25px;
+    position: relative;
+    animation: phone-from-up 3s ease-in-out;
+  }
+  .cp-content-container .content-container {
+    animation: text-from-down 3s ease-in-out;
+    text-align: left;
+  }
+  .cp-content-container .content-container .content-para {
+    padding: 0;
+    width: 28rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
