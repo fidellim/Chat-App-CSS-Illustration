@@ -376,7 +376,7 @@ body {
 	.circular-bg-opposite {
 		background: var(--lightGrayishViolet);
 		position: absolute;
-		bottom: -5rem;
+		bottom: 0rem;
 		right: -15%;
 		width: 40%;
 		height: 80%;
@@ -387,8 +387,12 @@ body {
 	}
 
 	.cp-content-container {
-		margin: 5rem 2rem;
+		position: absolute;
+		margin: 0rem 2rem;
 		flex-direction: row;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		// flex-wrap: wrap;
 		gap: 2rem;
 		.cp-container {
