@@ -26,56 +26,62 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Solution PC](./images/Solution%20PC.png)
+![Solution Mobile](./images/Solution%20Mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/fidellim/Chat-App-CSS-Illustration)
+- Live Site URL: [Live Site](https://eager-johnson-149938.netlify.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+To be able to apply SCSS for the first time. As well as learn some simple animation for the chat app.
 
 ```css
-.proud-of-this-css {
-	color: papayawhip;
+@media (min-width: 910px) {
+	.cp-content-container {
+		gap: 8rem;
+		.content-container {
+			.content-para {
+				width: 28rem;
+			}
+		}
+	}
 }
-```
 
-```js
-const proudOfThisFunc = () => {
-	console.log("🎉");
-};
+@keyframes text-from-down {
+	0% {
+		transform: translate(0%, 150%);
+	}
+	100% {
+		transform: translate(0%, 0%);
+	}
+}
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+To be learn other concepts of SASS as well as learn more animations in CSS.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [CSS Animations](https://www.w3schools.com/css/css3_animations.asp) - To be able to familiarize myself with some animations.
+- [Custom Radio Button](https://www.w3schools.com/howto/howto_css_custom_checkbox.asp) - To be able to customize a radio button.
+- [Different Angle for Linear Gradient](https://www.w3schools.com/css/css3_gradients.asp) - To be able to change the angle of linear gradient.
+- [SASS Documentation](https://sass-lang.com/documentation) - Documentation of SASS
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Fidel Lim](https://fidellim-portfolio.netlify.app/)
+- Frontend Mentor - [@fidellim](https://www.frontendmentor.io/profile/fidellim)
+- Github - [@fidellim](https://github.com/fidellim)
