@@ -79,6 +79,7 @@ To be learn other concepts of SASS as well as learn more animations in CSS.
 - [Custom Radio Button](https://www.w3schools.com/howto/howto_css_custom_checkbox.asp) - To be able to customize a radio button.
 - [Different Angle for Linear Gradient](https://www.w3schools.com/css/css3_gradients.asp) - To be able to change the angle of linear gradient.
 - [SASS Documentation](https://sass-lang.com/documentation) - Documentation of SASS
+- [Animations](https://css-tricks.com/css-animation-libraries/) - Helped me get an idea of animations to use for the chat bubbles in chat ap illustration.
 
 ## Author
 
